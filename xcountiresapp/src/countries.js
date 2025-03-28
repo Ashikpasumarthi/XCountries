@@ -10,10 +10,13 @@ export default function Countries() {
             setIsFetching(true);
             try {
                 let response = await fetch("https://xcountries-backend.azurewebsites.net/all");
-                if (!response.ok) throw new Error("Failed to fetch products");
+                // if (!response.ok) throw new Error("Failed to fetch products");
                 let data = await response.json();
                 console.log(data);
-                setCountries(data);
+                if (response.status === 200) {
+                    setCountries(data);
+                }
+
 
             }
             catch (error) {
