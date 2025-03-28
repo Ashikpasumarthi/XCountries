@@ -16,8 +16,8 @@ export default function Countries() {
                 setCountries(data);
 
             }
-            catch (e) {
-                console.log(e.message);
+            catch (error) {
+                console.error(error);
             } finally {
                 setIsFetching(false); // ✅ Set fetching to false when done
             }
