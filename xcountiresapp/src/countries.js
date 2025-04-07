@@ -20,7 +20,7 @@ export default function Countries() {
 
             }
             catch (error) {
-                console.error(error);
+                console.error("Error fetching data:", error)
             } finally {
                 setIsFetching(false); // ✅ Set fetching to false when done
             }
